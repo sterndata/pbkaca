@@ -75,7 +75,7 @@
 		<input id="searchsubmitheader" type="image" alt="Search" src="/wp-content/themes/pbkchicago/_image/magnifying-glass.gif" value="<?php esc_attr_e( 'Search', 'twentyeleven' ); ?>">
 </form>
 
-<br><a href="http://www.pbkaca.org/index.php/log-in/" style="color: #fff;">Member log in</a>
+<br><a href="/log-in/" style="color: #fff;">Member log in</a>
 
 </div> <!-- search-container-->
 
