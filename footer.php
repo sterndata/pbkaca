@@ -5,9 +5,9 @@
 
 <h4>Quicklinks</h4>
 
-<?php wp_nav_menu( array('theme_location' => 'footer_one' )); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'footer_one' ) ); ?>
 
-<?php wp_nav_menu( array('theme_location' => 'footer_two' )); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'footer_two' ) ); ?>
 
 
 </div> <!--utility-nav -->
@@ -20,15 +20,15 @@
 
 <?php wp_reset_query(); ?>
 
-<?php 
+<?php
 
-$args = array( 'post_type' => 'pbk_footer', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => -1);
+$args = array( 'post_type' => 'pbk_footer', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => -1 );
 
 $loop = new WP_Query( $args );
 
 while ( $loop->have_posts() ) : $loop->the_post();
 
-the_content();
+	the_content();
 
 endwhile;
 
@@ -39,10 +39,10 @@ endwhile;
 
 <div id="copyright">
 
-©<?php	
-	echo gmDate("Y "); 
-    $options = get_option('sample_theme_options');
-    echo $options['copyright-statement'];
+©<?php
+	echo gmDate( 'Y ' );
+	$options = get_option( 'sample_theme_options' );
+	echo $options['copyright-statement'];
 ?>
 
 

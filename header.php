@@ -6,13 +6,13 @@
 	<meta charset="utf-8">
 <?php wp_head(); ?>
 
-<?php $rCacheNum1 = rand(000000000000,9999999999999999); ?>
+<?php $rCacheNum1 = rand( 000000000000,9999999999999999 ); ?>
 
-<title><?php echo get_post_meta($post->ID, 'Title Tag', true); ?></title>
+<title><?php echo get_post_meta( $post->ID, 'Title Tag', true ); ?></title>
 
-<meta name="title" content="<?php echo get_post_meta($post->ID, 'Title Tag', true); ?>">
-<meta name="description" content="<?php echo get_post_meta($post->ID, 'Title Tag', true); ?>">
-<meta name="keywords" content="<?php echo get_post_meta($post->ID, 'Meta Keywords', true); ?>">
+<meta name="title" content="<?php echo get_post_meta( $post->ID, 'Title Tag', true ); ?>">
+<meta name="description" content="<?php echo get_post_meta( $post->ID, 'Title Tag', true ); ?>">
+<meta name="keywords" content="<?php echo get_post_meta( $post->ID, 'Meta Keywords', true ); ?>">
 <meta name="author" content="Swartwerk Media Design">
 <meta name="Copyright" content="Copyright Swartwerk Media Design, Inc. 2012. All Rights Reserved.">
 <meta name="revisit-after" content="10 days" />
@@ -20,14 +20,14 @@
 
 <link href='http://fonts.googleapis.com/css?family=Della+Respira|Archivo+Black' rel='stylesheet' type='text/css'>
 
-<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_image/favicon.ico">
+<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/_image/favicon.ico">
 
-<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="<?php bloginfo( 'template_directory' ); ?>/images/apple-touch-icon.png">
 
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?cache=<?php echo($rCacheNum1);?>">
+<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>?cache=<?php echo($rCacheNum1);?>">
 
 
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <script>
 		jQuery(function()
@@ -35,8 +35,8 @@
 			// Create slideshow instances
 			var $s = jQuery('.slideshow').slides(),
 
-			    // Access an instance API
-			    api = $s.eq(0).data('slides');
+				// Access an instance API
+				api = $s.eq(0).data('slides');
 
 			// Transition select
 			jQuery('select[name=transition]').on('change', function()
@@ -83,7 +83,7 @@
 
 <div id="prog-menu-wrapper">
 
-<?php wp_nav_menu( array('theme_location' => 'primary_nav' )); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'primary_nav' ) ); ?>
 
 <div id="prog-menu-toggle">LINK</div>
 
