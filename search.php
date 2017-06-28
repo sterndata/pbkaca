@@ -1,0 +1,90 @@
+<?php  
+/**
+ * The template for displaying Search Results pages.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Eleven
+ * @since Twenty Eleven 1.0
+ */
+
+get_header(); ?>
+
+
+
+<div id="primary-content-wrapper">
+
+<div id="primary-content">
+
+
+			<?php if ( have_posts() ) : ?>
+
+				<header class="page-header">
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				</header>
+
+		<ul id="search-results">
+
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						echo ("<li>");
+						
+						echo ("<h3>");
+						
+						the_title();
+						
+						echo ("</h3>");
+						
+						the_excerpt();
+						
+						echo ("<a class=\"searchlink\" href=\"");
+						
+						the_permalink();
+						
+						echo ("\">");
+						
+						the_permalink();
+						
+						echo ("</a>");
+						
+						echo ("</li>");
+						
+					?>
+
+				<?php endwhile; ?>
+
+				</ul>
+
+			<?php else : ?>
+
+				<article id="post-0" class="post no-results not-found">
+					<header class="entry-header">
+						<h1 class="entry-title"><?php _e( 'No Matches Found', 'twentyeleven' ); ?></h1>
+					</header><!-- .entry-header -->
+
+					<div class="entry-content">
+						<p><?php _e( 'Sorry, but nothing matched your search. Maybe try again with different terms.', 'twentyeleven' ); ?></p>
+						
+					</div><!-- .entry-content -->
+				</article><!-- #post-0 -->
+
+			<?php endif; ?>
+
+		</div>
+
+</div> <!--primary-content -->
+
+</div> <!--primary-content-wrapper -->
+
+
+
+
+
+
+
+<?php get_footer(); ?>
